@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
@@ -34,12 +33,11 @@ TListItem *list_append(TListItem *head, int data) {
 	return item;
 }
 
-//последовательно выводит в stdout элементы списка
-void list_print(TListItem *head) {
-	head = (*head).next;
+void list_traverse(TListItem *head, TFunc f) {
+	head = head->next;
 	while (head != NULL) {
-		printf("%d\n", (*head).data);
-		head = (*head).next;
+		f(head->data);
+		head = head->next;
 	}
 }
 
@@ -56,4 +54,14 @@ void list_free(TListItem **head) {
 	}
 
 	*head = NULL;
+}
+
+//ищет в списке элемент со значением needle, возвращает указатель на первый найденный, либо NULL
+TListItem *list_search(TListItem *head, int needle) {
+	return NULL;
+}
+
+//удаляет из списка элемент item
+void *list_delete(TListItem *head, TListItem *item) {
+
 }
