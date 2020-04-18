@@ -9,10 +9,10 @@ int main(int argc, char **argv) {
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 2) {
-		puts("files by 394x");
+		puts("cat by 394x");
 		puts("Puts contents of text file into stdout");
-		puts("Usage: files.exe <filename>");
-		puts("Example: files.exe file.txt");
+		puts("Usage: cat.exe <filename>");
+		puts("Example: cat.exe file.txt");
 		return 2;
 	}
 
